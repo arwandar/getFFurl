@@ -1,33 +1,52 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
   "parser": "babel-eslint",
+  "plugins": ["flowtype", "import", "sonarjs"],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:import/errors",
-    "airbnb",
+    "plugin:flowtype/recommended",
+    "airbnb-base",
+    "plugin:sonarjs/recommended",
     "prettier"
   ],
-  "plugins": ["react", "import"],
-
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "flowtype/no-types-missing-file-annotation": "off",
+    "import/no-mutable-exports": "error",
+    "linebreak-style": "off",
+    "no-console": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "AssignmentExpression": {
+          "array": false,
+          "object": true
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ]
+  },
   "env": {
-    "browser": true,
     "es6": true,
     "node": true
   },
-  "rules": {
-    "class-methods-use-this": "off",
-    "import/no-mutable-exports": "error",
-    "import/exports-last": "error",
-    "import/prefer-default-export": "off",
-    "import/no-named-default": "off",
-    "import/no-named-as-default": "off",
-    "no-console": "off",
-    "no-plusplus": "off",
-    "no-unused-vars": "warn",
-    "react/display-name": "off",
-    "react/jsx-filename-extension": "warn",
-    "react/no-array-index-key": "error",
-    "react/prop-types": "off",
-    "spaced-comment": "off"
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
   }
 }
