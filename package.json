@@ -1,17 +1,20 @@
 {
-  "name": "spotutils",
+  "name": "get-urls",
   "version": "2.1.0",
   "description": "",
+  "license": "Apache License 2.0",
   "main": ".src/index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js",
-    "build": "babel src --out-dir dist",
-    "serve": "node dist/index.js"
+    "dev": "nodemon --exec babel-node src/urls.js",
+    "parse": "babel src --out-dir dist && node dist/parse.js",
+    "get": "babel src --out-dir dist && node dist/urls.js",
+    "eslint-fix": "eslint --ext .jsx,.js ./src --fix --config .eslintrc"
   },
   "dependencies": {
     "axios": "0.19.2",
+    "core-js": "^3.6.5",
     "moment": "2.26.0",
-    "query-string": "6.12.1"
+    "query-string": "6.13.0"
   },
   "devDependencies": {
     "@babel/cli": "7.10.1",
@@ -34,8 +37,6 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "arrowParens": "always",
-    "printWidth": 100,
-    "trailingComma": "es5"
+    "printWidth": 100
   }
 }

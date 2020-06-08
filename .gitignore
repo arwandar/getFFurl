@@ -1,4 +1,6 @@
-yarn.lock
-url.txt
+
+
 node_modules
-url.txt
+dist
+.vscode
+yarn.lock

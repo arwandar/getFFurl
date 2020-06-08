@@ -1,0 +1,30 @@
+export default {
+  previous: 'previous_url_witcher.txt',
+  current: 'url_witcher.txt',
+  ao3: {
+    languages: ['fr', 'en'],
+    fandoms: [
+      'Wiedźmin | The Witcher - All Media Types',
+      'The Witcher (TV)',
+      'Wiedźmin | The Witcher (Video Game)',
+      'Wiedźmin | The Witcher Series - Andrzej Sapkowski',
+    ],
+    params: {
+      commit: 'Sort and Filter',
+      'exclude_work_search[category_ids][]': ['22', '2246', '21', '24', '116'],
+      'exclude_work_search[rating_ids][]': ['9', '10', '11'],
+      utf8: '✓',
+      'work_search[complete]': 'T',
+      'work_search[crossover]': 'F',
+      'work_search[date_from]': '2020-05-20',
+      'work_search[date_to]': '',
+      'work_search[excluded_tag_names]': '',
+      'work_search[other_tag_names]': '',
+      'work_search[query]': '',
+      'work_search[sort_column]': 'revised_at',
+      'work_search[words_from]': '1500',
+      'work_search[words_to]': '',
+      'include_work_search[character_ids][]': '193371',
+    },
+  },
+}

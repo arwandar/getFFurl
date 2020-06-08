@@ -1,0 +1,40 @@
+export default {
+  previous: 'previous_url_sherlock.txt',
+  current: 'url_sherlock.txt',
+  ao3: {
+    languages: ['fr', 'en'],
+    fandoms: ['Sherlock (TV)'],
+    params: {
+      commit: 'Sort and Filter',
+      'exclude_work_search[category_ids][]': ['21', '22', '24', '116', '2246'],
+      'exclude_work_search[rating_ids][]': ['12', '9', '10', '11'],
+      'include_work_search[relationship_ids][]': '11006',
+      tag_id: 'Sherlock (TV)',
+      utf8: '✓',
+      'work_search[complete]': 'T',
+      'work_search[crossover]': 'F',
+      'work_search[date_from]': '2020-02-20',
+      'work_search[date_to]': '',
+      'work_search[excluded_tag_names]': '',
+      'work_search[other_tag_names]': '',
+      'work_search[query]': '',
+      'work_search[sort_column]': 'revised_at',
+      'work_search[words_from]': '1500',
+      'work_search[words_to]': '',
+    },
+  },
+
+  ffnet: {
+    languages: ['1', '3'],
+    fandoms: ['tv/Sherlock'],
+    params: {
+      c1: '50136',
+      c2: '50137',
+      len: '5',
+      r: '4',
+      s: '2',
+      srt: '1',
+      t: '5',
+    },
+  },
+}
